@@ -345,7 +345,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   paperPrefab: {fileID: 4125650402564993733, guid: bff25ae112e98b447bc39c2dde78f15c,
     type: 3}
-  spawnTime: 3
+  spawnTime: 1
   paperSpeed: 70
 --- !u!4 &677296366
 Transform:
