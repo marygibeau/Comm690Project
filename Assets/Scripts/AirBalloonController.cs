@@ -17,7 +17,7 @@ public class AirBalloonController : MonoBehaviour
     }
 
     void FixedUpdate() {
-        if (Input.GetKeyDown(KeyCode.Space)) { 
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow)) { 
             rb.AddForce(new Vector2(0, jumpHeight), ForceMode2D.Impulse);
         }
         if (Input.GetKey(KeyCode.LeftArrow)) {
