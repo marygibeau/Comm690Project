@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PaperSpawner : MonoBehaviour
+public class enemySpawner : MonoBehaviour
 {
-    public GameObject paperPrefab;
-    public float spawnTime = 2f;
-    public int paperSpeed;
+
+    public GameObject enemy1;
+    public float spawnTime = 0.5f;
+    public int enemySpeed;
     private Vector2 spawnPosition;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +25,7 @@ public class PaperSpawner : MonoBehaviour
     void Spawn () {
         spawnPosition.x = 250f;
         spawnPosition.y = Random.Range(-200, 150);
-        var spawnedPaper = Instantiate(paperPrefab, spawnPosition, Quaternion.Euler(0, 0, 0));
-        spawnedPaper.GetComponent<Rigidbody2D>().velocity = paperSpeed * transform.localScale.x * spawnedPaper.transform.right;
+        var spawnedEnemy1 = Instantiate(enemy1, spawnPosition, Quaternion.Euler(0, 0, 0));
+        spawnedEnemy1.GetComponent<Rigidbody2D>().velocity = enemySpeed * transform.localScale.x * spawnedEnemy1.transform.right;
     }
 }
