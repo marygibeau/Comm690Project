@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class PaperShredder : MonoBehaviour
 {
-    void OnCollisionEnter2D(Collision2D col) {
-        if (col.gameObject.tag == "wall") {
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "wall")
+        {
             Destroy(gameObject);
         }
     }

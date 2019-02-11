@@ -588,7 +588,7 @@ GameObject:
   - component: {fileID: 677296365}
   - component: {fileID: 677296367}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: SpawnLord
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -637,8 +637,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy1: {fileID: 8100391087484809498, guid: 742b539d0661b2c4ba5211109aab2c8f, type: 3}
-  spawnTime: 0.5
-  enemySpeed: -125
+  spawnTime: 2
+  enemySpeed: -75
 --- !u!1 &753137857
 GameObject:
   m_ObjectHideFlags: 0
@@ -1175,6 +1175,49 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1830974022}
   m_CullTransparentMesh: 0
+--- !u!1 &1863204214
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1863204216}
+  - component: {fileID: 1863204215}
+  m_Layer: 0
+  m_Name: LevelManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1863204215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1863204214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2bce0e7354c68c4f92970dde270ed94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1863204216
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1863204214}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -8.327954, y: 0.0073167086, z: 98.15046}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1958149897
 GameObject:
   m_ObjectHideFlags: 0
@@ -1188,7 +1231,6 @@ GameObject:
   - component: {fileID: 1958149899}
   - component: {fileID: 1958149902}
   - component: {fileID: 1958149901}
-  - component: {fileID: 1958149903}
   m_Layer: 9
   m_Name: HotAirBalloon
   m_TagString: Player
@@ -1225,7 +1267,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0
-  m_GravityScale: 10
+  m_GravityScale: 8
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1294,6 +1336,16 @@ MonoBehaviour:
   rb: {fileID: 1958149899}
   paperText: {fileID: 405830520}
   jumpHeight: 50
+  numberOfHearts: 5
+  currentHealth: 5
+  hearts:
+  - {fileID: 1830974024}
+  - {fileID: 598467500}
+  - {fileID: 605542499}
+  - {fileID: 637978151}
+  - {fileID: 797659397}
+  heart: {fileID: 21300000, guid: f27bbe516b67b7848844b8768f6449f5, type: 3}
+  lvler: {fileID: 1863204215}
 --- !u!70 &1958149902
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -1310,24 +1362,3 @@ CapsuleCollider2D:
   m_Offset: {x: -0.44496328, y: -0.57724434}
   m_Size: {x: 10.04715, y: 13.562737}
   m_Direction: 0
---- !u!114 &1958149903
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1958149897}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a80acbd96863dff4fb887034b01431b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  numberOfHearts: 5
-  currentHealth: 5
-  hearts:
-  - {fileID: 1830974024}
-  - {fileID: 598467500}
-  - {fileID: 605542499}
-  - {fileID: 637978151}
-  - {fileID: 797659397}
-  heart: {fileID: 21300000, guid: f27bbe516b67b7848844b8768f6449f5, type: 3}
