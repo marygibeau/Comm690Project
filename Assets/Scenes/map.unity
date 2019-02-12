@@ -1237,7 +1237,12 @@ MonoBehaviour:
   menuTitle: {fileID: 78100370}
   menuSubtext: {fileID: 1728479246}
   menuContinueText: {fileID: 614510401}
-  planet: {fileID: 1628426952}
+  menuPlanet: {fileID: 1628426952}
+  planets:
+  - {fileID: 21300000, guid: af31528b1e88e1e4e98c8e9479a46b43, type: 3}
+  - {fileID: 21300000, guid: e1300faba7e1f8142aaee4adc08f3d17, type: 3}
+  - {fileID: 21300000, guid: 075271d50f0d9d64cab51b7e7dbdb909, type: 3}
+  - {fileID: 21300000, guid: 68c07cf025d09b24b93ea547dc391d1d, type: 3}
   lvl: {fileID: 1698671226}
   currentWorld: 0
 --- !u!1 &1023255146
