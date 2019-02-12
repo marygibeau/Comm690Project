@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PaperShredder : MonoBehaviour
+public class enemySlicer : MonoBehaviour
 {
     void OnCollisionEnter2D(Collision2D col)
     {
@@ -10,5 +10,11 @@ public class PaperShredder : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        if (col.gameObject.tag == "Player")
+        {
+            Destroy(gameObject);
+        }
+    
     }
 }
+
