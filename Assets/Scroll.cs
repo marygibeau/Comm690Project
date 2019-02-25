@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class Scroll : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    float scrollSpeed = -30f;
+    Vector2 startPos;
+
+    void Start ()
     {
-        
+    	startPos = transform.position;
     }
 
-    // Update is called once per frame
-    void Update()
+    void Update ()
     {
-        
+        float newPos = Mathf.Repeat (Time.time * scrollSpeed, 200);
+        transform.position = startPos + Vector2.right * newPos;
     }
 }
