@@ -15,7 +15,8 @@ public class Scroll : MonoBehaviour
 
     void Update ()
     {
-        float newPos = Mathf.Repeat (Time.time * scrollSpeed, 200);
-        transform.position = startPos + Vector2.right * newPos;
+        // this scolls for a minute 19
+        // float newPos = Mathf.Repeat (Time.time * scrollSpeed, 20);
+        transform.position = startPos + Vector2.right * (Time.time * scrollSpeed);
     }
 }
