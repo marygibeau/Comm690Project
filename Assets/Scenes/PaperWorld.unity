@@ -307,8 +307,8 @@ GameObject:
   m_Component:
   - component: {fileID: 451858714}
   - component: {fileID: 451858713}
-  - component: {fileID: 451858716}
   - component: {fileID: 451858715}
+  - component: {fileID: 451858716}
   m_Layer: 0
   m_Name: Scrollingbackground
   m_TagString: Untagged
@@ -400,9 +400,9 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 451858712}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ded2d7207b98f43499930e9a1f2ff261, type: 3}
+  m_Script: {fileID: 11500000, guid: 60b31e3b32e7b48de91d220f51a012ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &598394548
