@@ -5,18 +5,17 @@ using System.Linq;
 
 public class snakeController : MonoBehaviour
 {
+    // snake level will end when the snake has collected 30 food
     public LevelManager lvler;
     List<Transform> tail = new List<Transform>();
     Vector2 dir = Vector2.right;
     bool ate = false;
     public GameObject tailPrefab;
-    // Start is called before the first frame update
     void Start()
     {
         InvokeRepeating("Move", 0.01f, 0.01f);    
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKey(KeyCode.RightArrow)) {

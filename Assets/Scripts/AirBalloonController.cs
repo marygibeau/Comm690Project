@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class AirBalloonController : MonoBehaviour
 {
-
+// paper world will end after 1 minute 15 seconds
     public Rigidbody2D rb;
     public Text paperText;
     public float jumpHeight;
