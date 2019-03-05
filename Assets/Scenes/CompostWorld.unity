@@ -769,5 +769,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lvler: {fileID: 1493153599}
+  minimalDistance: 0.25
+  speed: 1
+  rotationSpeed: 50
+  tail:
+  - {fileID: 5992658247555673984}
+  beginsize: 3
   tailPrefab: {fileID: 5992658247555673979, guid: d3ac37c1d3bed6b4c9d83ece89c3b1e3,
     type: 3}
+--- !u!4 &5992658247555673984 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7324731444077734640, guid: d3ac37c1d3bed6b4c9d83ece89c3b1e3,
+    type: 3}
+  m_PrefabInstance: {fileID: 3980645585503792860}
+  m_PrefabAsset: {fileID: 0}

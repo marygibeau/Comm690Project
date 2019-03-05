@@ -25,7 +25,7 @@ public class enemySpawner : MonoBehaviour
 
     void Spawn () {
         spawnPosition.x = 325f;
-        spawnPosition.y = Random.Range(-200, 150);
+        spawnPosition.y = Random.Range(-150, 240);
         var spawnedEnemy1 = Instantiate(enemy1, spawnPosition, Quaternion.Euler(0, 0, 0));
         spawnedEnemy1.GetComponent<Rigidbody2D>().velocity = enemySpeed * transform.localScale.x * spawnedEnemy1.transform.right;
     }

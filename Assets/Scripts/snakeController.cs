@@ -7,6 +7,7 @@ public class snakeController : MonoBehaviour
 {
     // snake level will end when the snake has collected 30 food
     public LevelManager lvler;
+    public int eatenCount = 0;
     List<Transform> tail = new List<Transform>();
     Vector2 dir = Vector2.right;
     bool ate = false;
@@ -49,6 +50,10 @@ public class snakeController : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other) {
         if(other.name.StartsWith("food")) {
             ate = true;
+            eatenCount++;
+            if (eatenCount >= 15) {
+                lvler.LoadLevel("map");
+            }
             Destroy(other.gameObject);
         } else {
             lvler.LoadLevel("map");
