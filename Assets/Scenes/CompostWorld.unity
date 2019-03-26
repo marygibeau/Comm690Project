@@ -801,5 +801,6 @@ MonoBehaviour:
   lvler: {fileID: 1493153599}
   foodie: {fileID: 603002929}
   eatenCount: 0
+  offset: 10
   tailPrefab: {fileID: 5992658247555673979, guid: d3ac37c1d3bed6b4c9d83ece89c3b1e3,
     type: 3}
