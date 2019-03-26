@@ -137,7 +137,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 103621290}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -132.29387, y: 198.21, z: -0.8356552}
+  m_LocalPosition: {x: -132.29387, y: 259.8, z: -0.8356552}
   m_LocalScale: {x: 699.8, y: -43.79, z: 1}
   m_Children: []
   m_Father: {fileID: 469402417}
@@ -194,7 +194,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 293910587}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 216.99774, y: -11.229574, z: -0.8356552}
+  m_LocalPosition: {x: 219, y: -11.229574, z: -0.8356552}
   m_LocalScale: {x: 565.30023, y: -31.900015, z: 1}
   m_Children: []
   m_Father: {fileID: 469402417}
@@ -260,6 +260,54 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &603002928
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 603002930}
+  - component: {fileID: 603002929}
+  m_Layer: 0
+  m_Name: foodspawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &603002929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 603002928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d586858fc34a7324189d64b393032fca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  food: {fileID: 6814741779388675518, guid: c45a11b85a7f5874594d2f397576737d, type: 3}
+  top: {fileID: 103621291}
+  bottom: {fileID: 781013424}
+  left: {fileID: 1780951302}
+  right: {fileID: 293910588}
+--- !u!4 &603002930
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 603002928}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2110.5037, y: -4.5328546, z: 97.5373}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &781013423
 GameObject:
   m_ObjectHideFlags: 0
@@ -285,7 +333,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 781013423}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -132.29387, y: -259.3296, z: -0.8356552}
+  m_LocalPosition: {x: -132.29387, y: -276.81, z: -0.8356552}
   m_LocalScale: {x: 699.8, y: -43.79, z: 1}
   m_Children: []
   m_Father: {fileID: 469402417}
@@ -328,7 +376,6 @@ GameObject:
   - component: {fileID: 860609886}
   - component: {fileID: 860609885}
   - component: {fileID: 860609884}
-  - component: {fileID: 860609887}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -400,23 +447,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &860609887
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 860609883}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d586858fc34a7324189d64b393032fca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  food: {fileID: 6814741779388675518, guid: c45a11b85a7f5874594d2f397576737d, type: 3}
-  top: {fileID: 103621291}
-  bottom: {fileID: 781013424}
-  left: {fileID: 1780951302}
-  right: {fileID: 293910588}
 --- !u!1 &1314368639
 GameObject:
   m_ObjectHideFlags: 0
@@ -649,7 +679,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1780951301}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -473.05225, y: -11.229574, z: -0.8356552}
+  m_LocalPosition: {x: -469.6, y: -11.229574, z: -0.8356552}
   m_LocalScale: {x: 565.30023, y: -31.900015, z: 1}
   m_Children: []
   m_Father: {fileID: 469402417}
@@ -769,17 +799,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lvler: {fileID: 1493153599}
-  minimalDistance: 0.25
-  speed: 1
-  rotationSpeed: 50
-  tail:
-  - {fileID: 5992658247555673984}
-  beginsize: 3
+  foodie: {fileID: 603002929}
+  eatenCount: 0
   tailPrefab: {fileID: 5992658247555673979, guid: d3ac37c1d3bed6b4c9d83ece89c3b1e3,
     type: 3}
---- !u!4 &5992658247555673984 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7324731444077734640, guid: d3ac37c1d3bed6b4c9d83ece89c3b1e3,
-    type: 3}
-  m_PrefabInstance: {fileID: 3980645585503792860}
-  m_PrefabAsset: {fileID: 0}

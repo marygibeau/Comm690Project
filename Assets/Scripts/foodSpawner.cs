@@ -15,7 +15,7 @@ public class foodSpawner : MonoBehaviour
         InvokeRepeating("Spawn", 3, 4);
     }
 
-    void Spawn() {
+    public void Spawn() {
         int x = (int) Random.Range(left.position.x, right.position.x);
         int y = (int) Random.Range(bottom.position.y, top.position.y);
         Instantiate(food, new Vector2(x, y), Quaternion.identity);
