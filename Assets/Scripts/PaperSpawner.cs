@@ -21,8 +21,8 @@ public class PaperSpawner : MonoBehaviour
     }
 
     void Spawn () {
-        spawnPosition.x = 250f;
-        spawnPosition.y = Random.Range(-200, 150);
+        spawnPosition.x = 325f;
+        spawnPosition.y = Random.Range(-150, 240);
         var spawnedPaper = Instantiate(paperPrefab, spawnPosition, Quaternion.Euler(0, 0, 0));
         spawnedPaper.GetComponent<Rigidbody2D>().velocity = paperSpeed * transform.localScale.x * spawnedPaper.transform.right;
     }
