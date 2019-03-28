@@ -22,7 +22,7 @@ public class TimerScript : MonoBehaviour
             timeLeft -= Time.deltaTime;
             timer.text = Mathf.FloorToInt(timeLeft) + " sec left";
             if (timeLeft <= 0) {
-                lvler.LoadLevel("map");
+                lvler.LoadLevel("LevelComplete");
             }
         }
     }
