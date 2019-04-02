@@ -46,7 +46,7 @@ public class AirBalloonController : MonoBehaviour
             numberOfHearts--;
         }
         if (currentHealth <= 0) {
-            lvler.LoadLevel("map");
+            lvler.LoadLevel("GameOver");
         }
     }
 

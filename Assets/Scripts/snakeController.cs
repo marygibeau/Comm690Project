@@ -9,8 +9,9 @@ public class snakeController : MonoBehaviour
     public LevelManager lvler;
     public foodSpawner foodie;
     public int eatenCount = 0;
+    // refactor tail so it's a list of game objects so I can disable and reenable collider for first object
     List<Transform> tail = new List<Transform>();
-    public int offset = 10;
+    public int offset = 15;
     Vector2 dir = Vector2.right;
     bool ate = false;
     public GameObject tailPrefab;
@@ -49,6 +50,7 @@ public class snakeController : MonoBehaviour
             ate = false;
         } else if (tail.Count > 0) {
             // move last tail element to where the head was
+            Debug.Log(tail.Last().GetType().ToString());
             tail.Last().position = v;
             // add back to front and remove last
             tail.Insert(0, tail.Last());
@@ -65,9 +67,10 @@ public class snakeController : MonoBehaviour
             }
             Destroy(other.gameObject);
             foodie.Spawn();
-        } else {
+        }
+        if (other.tag == "wall") {
             lvler.LoadLevel("map");
-        } 
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D other) {

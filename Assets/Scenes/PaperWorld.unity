@@ -1704,6 +1704,9 @@ GameObject:
   - component: {fileID: 1958149899}
   - component: {fileID: 1958149902}
   - component: {fileID: 1958149901}
+  - component: {fileID: 1958149905}
+  - component: {fileID: 1958149904}
+  - component: {fileID: 1958149903}
   m_Layer: 9
   m_Name: HotAirBalloon
   m_TagString: Player
@@ -1783,7 +1786,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c307d51d42d7b4256beceb74142a1e39, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8d3740b7735164443835e992f36506ce, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1832,6 +1835,54 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.08, y: -0}
-  m_Size: {x: 13.6, y: 17.9}
+  m_Offset: {x: -0.03480046, y: 2.7040858}
+  m_Size: {x: 14.955571, y: 15.132537}
+  m_Direction: 0
+--- !u!70 &1958149903
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1958149897}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0800824, y: -6.5857024}
+  m_Size: {x: 4.562265, y: 6.1481075}
+  m_Direction: 0
+--- !u!70 &1958149904
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1958149897}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 8.550856, y: 3.445519}
+  m_Size: {x: 2.4839299, y: 7.718188}
+  m_Direction: 0
+--- !u!70 &1958149905
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1958149897}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -8.630939, y: 3.4454784}
+  m_Size: {x: 2.158123, y: 7.8402414}
   m_Direction: 0
