@@ -4988,6 +4988,7 @@ GameObject:
   - component: {fileID: 982526957}
   - component: {fileID: 982526956}
   - component: {fileID: 982526955}
+  - component: {fileID: 982526958}
   m_Layer: 0
   m_Name: octo
   m_TagString: Untagged
@@ -5017,7 +5018,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 982526953}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 88f043fd52ed34d11bb77e48ee469ebb, type: 2}
   m_CullingMode: 0
@@ -5035,7 +5036,7 @@ Animation:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 982526953}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Animation: {fileID: 0}
   m_Animations: []
@@ -5091,6 +5092,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &982526958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 982526953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1c3725f77beb4eb287d7e8acd0effb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1158685237
 GameObject:
   m_ObjectHideFlags: 0
