@@ -24,6 +24,9 @@ public class TimerScript : MonoBehaviour
             if (timeLeft <= 0) {
                 lvler.LoadLevel("LevelComplete");
             }
+        } else {
+            timeLeft += Time.deltaTime;
+            timer.text = "in " + Mathf.FloorToInt(timeLeft) + " seconds";
         }
     }
 }
