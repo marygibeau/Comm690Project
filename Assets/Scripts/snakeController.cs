@@ -15,6 +15,7 @@ public class snakeController : MonoBehaviour
     public int offset = 15;
     Vector2 dir = Vector2.right;
     bool ate = false;
+    bool hurt = false;
     public GameObject tailPrefab;
     public Text scoreBoard;
     void Start()
@@ -44,6 +45,13 @@ public class snakeController : MonoBehaviour
         Vector2 v = transform.position;
 
         transform.Translate(dir);
+        if (hurt) {
+            Debug.Log("removing tail");
+            Transform bye = tail.ElementAt(tail.Count - 1);
+            tail.RemoveAt(tail.Count - 1);
+            Destroy(bye.gameObject);
+            hurt = false;
+        }
         if (ate) {
             // create new tail object
             GameObject g = (GameObject) Instantiate(tailPrefab, v, Quaternion.identity);
@@ -62,22 +70,33 @@ public class snakeController : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D other) {
-        if(other.name.StartsWith("food")) {
+        if(other.tag == "compost") {
             ate = true;
             eatenCount++;
             scoreBoard.text = "Food Collected: " + eatenCount + "/15";
             if (eatenCount >= 15) {
-                lvler.LoadLevel("map");
+                lvler.LoadLevel("LevelComplete");
             }
             Destroy(other.gameObject);
-            foodie.Spawn();
+            foodie.FoodSpawn();
         }
-        if (other.tag == "wall") {
-            lvler.LoadLevel("map");
+
+        if(other.tag == "notCompost") {
+            Debug.Log("collided with can");
+            hurt = true;
+            eatenCount--;
+            scoreBoard.text = "Food Collected: " + eatenCount + "/15";
+            if (eatenCount < 0) {
+                Debug.Log("eaten count is " + eatenCount);
+                lvler.LoadLevel("GameOver");
+                Debug.Log("we in trouble now bois");
+            }
+            Destroy(other.gameObject);
+            foodie.TrashSpawn();
         }
 
         if(this.tag == "Player" && other.tag == "tail") {
-            lvler.LoadLevel("map");
+            lvler.LoadLevel("GameOver");
             Debug.Log("collided with self");
         }
     }

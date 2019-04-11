@@ -289,7 +289,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d586858fc34a7324189d64b393032fca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  food: {fileID: 6814741779388675518, guid: c45a11b85a7f5874594d2f397576737d, type: 3}
+  compost: {fileID: 6814741779388675518, guid: c45a11b85a7f5874594d2f397576737d, type: 3}
+  notCompost: {fileID: 859384525017879872, guid: 67308558bb3ab4f45be55d2b93cdf7f1,
+    type: 3}
   top: {fileID: 103621291}
   bottom: {fileID: 781013424}
   left: {fileID: 1780951302}
