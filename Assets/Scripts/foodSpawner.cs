@@ -16,8 +16,8 @@ public class foodSpawner : MonoBehaviour
     }
 
     public void Spawn() {
-        int x = (int) Random.Range(left.position.x, right.position.x);
-        int y = (int) Random.Range(bottom.position.y, top.position.y);
+        int x = (int) Random.Range(left.position.x + food.GetComponent<SpriteRenderer>().bounds.size.x, right.position.x - food.GetComponent<SpriteRenderer>().bounds.size.x);
+        int y = (int) Random.Range(bottom.position.y + food.GetComponent<SpriteRenderer>().bounds.size.y, top.position.y - food.GetComponent<SpriteRenderer>().bounds.size.x);
         Instantiate(food, new Vector2(x, y), Quaternion.identity);
     }
 }

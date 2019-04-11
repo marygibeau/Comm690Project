@@ -54,9 +54,9 @@ public class TruckManager : MonoBehaviour
                  if (currentWorld == 0) {
                     lvl.LoadLevel("TitleScreen");
                  } else if (currentWorld == 1) {
-                    lvl.LoadLevel("Facility");
+                    lvl.LoadLevel("PaperIntro");
                  } else if (currentWorld == 2) {
-                    lvl.LoadLevel("PaperWorld");
+                    lvl.LoadLevel("CompostWorld");
                  }
              }
              if (currentWorld == 0) {

@@ -7,6 +7,8 @@ TagManager:
   - paper
   - wall
   - enemy
+  - tail
+  - firstTail
   layers:
   - Default
   - TransparentFX

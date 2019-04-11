@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using UnityEngine.UI;
 
 public class snakeController : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class snakeController : MonoBehaviour
     Vector2 dir = Vector2.right;
     bool ate = false;
     public GameObject tailPrefab;
+    public Text scoreBoard;
     void Start()
     {
         dir = Vector2.right * offset;
@@ -50,10 +52,11 @@ public class snakeController : MonoBehaviour
             ate = false;
         } else if (tail.Count > 0) {
             // move last tail element to where the head was
-            Debug.Log(tail.Last().GetType().ToString());
             tail.Last().position = v;
             // add back to front and remove last
+            tail.Last().tag = "firstTail";
             tail.Insert(0, tail.Last());
+            tail.ElementAt(1).tag = "tail";
             tail.RemoveAt(tail.Count - 1);
         }
     }
@@ -62,6 +65,7 @@ public class snakeController : MonoBehaviour
         if(other.name.StartsWith("food")) {
             ate = true;
             eatenCount++;
+            scoreBoard.text = "Food Collected: " + eatenCount + "/15";
             if (eatenCount >= 15) {
                 lvler.LoadLevel("map");
             }
@@ -70,6 +74,11 @@ public class snakeController : MonoBehaviour
         }
         if (other.tag == "wall") {
             lvler.LoadLevel("map");
+        }
+
+        if(this.tag == "Player" && other.tag == "tail") {
+            lvler.LoadLevel("map");
+            Debug.Log("collided with self");
         }
     }
 
