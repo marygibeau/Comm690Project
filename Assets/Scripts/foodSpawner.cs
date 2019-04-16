@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class foodSpawner : MonoBehaviour
 {
-    public GameObject food;
+    public GameObject compost;
+    public GameObject notCompost;
     public Transform top;
     public Transform bottom;
     public Transform left;
@@ -12,12 +13,19 @@ public class foodSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("Spawn", 3, 4);
+        InvokeRepeating("FoodSpawn", 3, 3);
+        InvokeRepeating("TrashSpawn", 3, 5);
     }
 
-    public void Spawn() {
-        int x = (int) Random.Range(left.position.x + food.GetComponent<SpriteRenderer>().bounds.size.x, right.position.x - food.GetComponent<SpriteRenderer>().bounds.size.x);
-        int y = (int) Random.Range(bottom.position.y + food.GetComponent<SpriteRenderer>().bounds.size.y, top.position.y - food.GetComponent<SpriteRenderer>().bounds.size.x);
-        Instantiate(food, new Vector2(x, y), Quaternion.identity);
+    public void FoodSpawn() {
+        int x = (int) Random.Range(left.position.x + compost.GetComponent<SpriteRenderer>().bounds.size.x, right.position.x - compost.GetComponent<SpriteRenderer>().bounds.size.x);
+        int y = (int) Random.Range(bottom.position.y + compost.GetComponent<SpriteRenderer>().bounds.size.y, top.position.y - compost.GetComponent<SpriteRenderer>().bounds.size.x);
+        Instantiate(compost, new Vector2(x, y), Quaternion.identity);
+    }
+
+    public void TrashSpawn() {
+        int x = (int) Random.Range(left.position.x + notCompost.GetComponent<SpriteRenderer>().bounds.size.x, right.position.x - notCompost.GetComponent<SpriteRenderer>().bounds.size.x);
+        int y = (int) Random.Range(bottom.position.y + notCompost.GetComponent<SpriteRenderer>().bounds.size.y, top.position.y - notCompost.GetComponent<SpriteRenderer>().bounds.size.x);
+        Instantiate(notCompost, new Vector2(x, y), Quaternion.identity);
     }
 }
