@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// handles spawning of both food and trash
 public class foodSpawner : MonoBehaviour
 {
     public GameObject compost;
@@ -17,12 +18,14 @@ public class foodSpawner : MonoBehaviour
         InvokeRepeating("TrashSpawn", 3, 5);
     }
 
+// spawn food at random x and y
     public void FoodSpawn() {
         int x = (int) Random.Range(left.position.x + compost.GetComponent<SpriteRenderer>().bounds.size.x, right.position.x - compost.GetComponent<SpriteRenderer>().bounds.size.x);
         int y = (int) Random.Range(bottom.position.y + compost.GetComponent<SpriteRenderer>().bounds.size.y, top.position.y - compost.GetComponent<SpriteRenderer>().bounds.size.x);
         Instantiate(compost, new Vector2(x, y), Quaternion.identity);
     }
 
+// spawn trash at random x and y
     public void TrashSpawn() {
         int x = (int) Random.Range(left.position.x + notCompost.GetComponent<SpriteRenderer>().bounds.size.x, right.position.x - notCompost.GetComponent<SpriteRenderer>().bounds.size.x);
         int y = (int) Random.Range(bottom.position.y + notCompost.GetComponent<SpriteRenderer>().bounds.size.y, top.position.y - notCompost.GetComponent<SpriteRenderer>().bounds.size.x);

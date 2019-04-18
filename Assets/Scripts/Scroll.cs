@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// script for scrolling background animation
 public class Scroll : MonoBehaviour
 {
 
