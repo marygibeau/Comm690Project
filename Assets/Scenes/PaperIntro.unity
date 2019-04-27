@@ -244,9 +244,9 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 758a05d5152d97d458da7aa3f6859c5d, type: 3}
+    m_Font: {fileID: 12800000, guid: 5d41a65648e8b43c3beb7860f635b601, type: 3}
     m_FontSize: 20
-    m_FontStyle: 2
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 40
@@ -256,8 +256,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1.05
-  m_Text: 'The average American uses seven trees a year in paper, wood, and other
-    products made from trees. This amounts to about 2,000,000,000 trees per year!
+  m_Text: 'Recyling Paper:
+
+
+    The average American uses seven trees a year in paper, wood, and other products
+    made from trees. This amounts to about 2,000,000,000 trees per year!
 
 
     Each ton (2000 pounds) of recycled paper can save 17 trees, 380 gallons of oil,
@@ -290,6 +293,8 @@ GameObject:
   - component: {fileID: 464183663}
   - component: {fileID: 464183662}
   - component: {fileID: 464183661}
+  - component: {fileID: 464183665}
+  - component: {fileID: 464183664}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -407,6 +412,40 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 464183659}
   m_CullTransparentMesh: 0
+--- !u!111 &464183664
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 464183659}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: fcc7c8020ebb54db192c70b96d385fc7, type: 2}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!95 &464183665
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 464183659}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 333fe6f3e59244ca79e76e9d27c78e2c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &626376425
 GameObject:
   m_ObjectHideFlags: 0
