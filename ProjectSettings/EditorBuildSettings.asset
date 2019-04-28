@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PaperIntro.unity
     guid: f28e3513bfaa745cfbb247577739f98b
+  - enabled: 1
+    path: Assets/Scenes/GameIntro.unity
+    guid: 1e37b9e4899d744649cb06ba01759f5e
   m_configObjects: {}
