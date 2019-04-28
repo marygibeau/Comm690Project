@@ -15,11 +15,16 @@ public class AirBalloonController : MonoBehaviour
     public Image[] hearts;
     public Sprite heart;
     public LevelManager lvler;
+    public AudioClip collect;
+    public AudioClip bad;
+    public AudioSource source;
+
 
     private void Start()
     {
         // resets paper collected
         paperCounter = 0;
+        source = GetComponent<AudioSource>();
     }
 
     void FixedUpdate()
@@ -62,6 +67,8 @@ public class AirBalloonController : MonoBehaviour
             paperCounter++;
             paperText.text = "Papers Collected: " + paperCounter;
             Destroy(col.gameObject);
+            source.Play(collect);
+
         }
         // if collides with enemy decrease health
         if (col.gameObject.tag == "enemy")
