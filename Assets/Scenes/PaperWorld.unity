@@ -1823,6 +1823,9 @@ MonoBehaviour:
   - {fileID: 797659397}
   heart: {fileID: 21300000, guid: f27bbe516b67b7848844b8768f6449f5, type: 3}
   lvler: {fileID: 1863204215}
+  source: {fileID: 0}
+  collect: {fileID: 8300000, guid: 99464925c5df14257ad2c57a900fb45c, type: 3}
+  ouch: {fileID: 0}
 --- !u!70 &1958149902
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
