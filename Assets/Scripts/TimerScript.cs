@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+// countdown and count up timer script
 public class TimerScript : MonoBehaviour
 {
     public Text timer;

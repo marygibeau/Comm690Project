@@ -15,16 +15,20 @@ public class snakeController : MonoBehaviour
     public int offset = 15;
     Vector2 dir = Vector2.right;
     bool ate = false;
+    bool hurt = false;
     public GameObject tailPrefab;
     public Text scoreBoard;
     void Start()
     {
+        // sets initial direction to be right
         dir = Vector2.right * offset;
+        // allows for rigid, non-continuous movement
         InvokeRepeating("Move", 0.01f, 0.1f);    
     }
 
     void Update()
     {
+        // change direction on key input
         if (Input.GetKey(KeyCode.RightArrow)) {
             dir = Vector2.right * offset;
         } else if (Input.GetKey(KeyCode.DownArrow)) {
@@ -37,13 +41,19 @@ public class snakeController : MonoBehaviour
     }
 
     void Move() {
-        // fix end of snake, it looks super weird
-        // fix snake circles so they span further apart
 
         // this saves the current position to be the offset
         Vector2 v = transform.position;
-
+        // move head a step in direction
         transform.Translate(dir);
+        // remove last piece of tail if injured
+        if (hurt) {
+            Transform bye = tail.ElementAt(tail.Count - 1);
+            tail.RemoveAt(tail.Count - 1);
+            Destroy(bye.gameObject);
+            hurt = false;
+        }
+        // add new tail piece at end of snake on move
         if (ate) {
             // create new tail object
             GameObject g = (GameObject) Instantiate(tailPrefab, v, Quaternion.identity);
@@ -51,38 +61,60 @@ public class snakeController : MonoBehaviour
             tail.Insert(0, g.transform);
             ate = false;
         } else if (tail.Count > 0) {
+            // mechanic to move snake along
+            // basically a tail piece conveyor belt
+
             // move last tail element to where the head was
             tail.Last().position = v;
-            // add back to front and remove last
+            // change tag to reflect now being first tail piece
             tail.Last().tag = "firstTail";
+            // move last to first in array
             tail.Insert(0, tail.Last());
+            // change tag of former first tail piece
             tail.ElementAt(1).tag = "tail";
+            // remove old last element
             tail.RemoveAt(tail.Count - 1);
         }
     }
 
     void OnTriggerEnter2D(Collider2D other) {
-        if(other.name.StartsWith("food")) {
+        // add to score and change game state when eat food
+        if(other.tag == "compost") {
             ate = true;
             eatenCount++;
             scoreBoard.text = "Food Collected: " + eatenCount + "/15";
+            // win condition
             if (eatenCount >= 15) {
-                lvler.LoadLevel("map");
+                lvler.LoadLevel("LevelComplete");
             }
+            // destroy old food and spawn new in its place
             Destroy(other.gameObject);
-            foodie.Spawn();
-        }
-        if (other.tag == "wall") {
-            lvler.LoadLevel("map");
+            foodie.FoodSpawn();
         }
 
+        // remove from score and change game state when eat trash
+        if(other.tag == "notCompost") {
+            hurt = true;
+            eatenCount--;
+            scoreBoard.text = "Food Collected: " + eatenCount + "/15";
+            // lose condition
+            if (eatenCount < 0) {
+                Debug.Log("eaten count is " + eatenCount);
+                lvler.LoadLevel("GameOver");
+            }
+            // destroy trash and spawn new in its place
+            Destroy(other.gameObject);
+            foodie.TrashSpawn();
+        }
+
+        // lose condition if player collides with self
         if(this.tag == "Player" && other.tag == "tail") {
-            lvler.LoadLevel("map");
-            Debug.Log("collided with self");
+            lvler.LoadLevel("GameOver");
         }
     }
 
     private void OnCollisionEnter2D(Collision2D other) {
+        // reset game if collide with wall
         if(other.collider.tag == "wall") {
             lvler.LoadLevel("CompostWorld");
         }    

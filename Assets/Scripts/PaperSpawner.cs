@@ -14,13 +14,8 @@ public class PaperSpawner : MonoBehaviour
         InvokeRepeating("Spawn", spawnTime, spawnTime);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     void Spawn () {
+        // spawn paper off screen at random y
         spawnPosition.x = 325f;
         spawnPosition.y = Random.Range(-150, 240);
         var spawnedPaper = Instantiate(paperPrefab, spawnPosition, Quaternion.Euler(0, 0, 0));
