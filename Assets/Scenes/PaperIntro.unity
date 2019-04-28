@@ -220,8 +220,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 221.6, y: 232.3}
-  m_SizeDelta: {x: 506.8, y: 30.3}
+  m_AnchoredPosition: {x: 216.1, y: 281.6}
+  m_SizeDelta: {x: 486.4, y: 30.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &296557517
 MonoBehaviour:
@@ -245,34 +245,25 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 5d41a65648e8b43c3beb7860f635b601, type: 3}
-    m_FontSize: 20
+    m_FontSize: 19
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
-    m_MaxSize: 40
-    m_Alignment: 0
+    m_MinSize: 0
+    m_MaxSize: 195
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
-    m_LineSpacing: 1.05
-  m_Text: 'Recyling Paper:
-
-
-    The average American uses seven trees a year in paper, wood, and other products
-    made from trees. This amounts to about 2,000,000,000 trees per year!
-
-
-    Each ton (2000 pounds) of recycled paper can save 17 trees, 380 gallons of oil,
-    three cubic yards of landfill space, 4000 kilowatts of energy, and 7000 gallons
-    of water. This represents a 64% energy savings, a 58% water savings, and 60 pounds
-    less of air pollution!
-
-
-    Manufacturing recycled paper uses only 60% of the energy needed to make paper
-    from new materials.
-
-'
+    m_LineSpacing: 1
+  m_Text: "Hello explorer! This planet has not learned how to recycle their waste
+    so they are being overrun with paper! \n\nThe average person uses seven trees
+    a year in paper, wood, and other products made from trees. This amounts to about
+    2,000,000,000 trees per year! \n\nEach ton of recycled paper can save 17 trees,
+    380 gallons of oil and 7000 gallons of water. Recycling paper saves energy, landfill
+    space, and water! \n\nRemember to recycle any and all paper products and be sure
+    to buy products made out of recycled materials. Manufacturing recycled paper uses
+    only 60% of the energy needed to make paper from new materials.\n"
 --- !u!222 &296557518
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5363,7 +5354,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1193696352}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &1193696354
 Camera:
   m_ObjectHideFlags: 0
@@ -5808,8 +5799,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 221.6, y: 46}
-  m_SizeDelta: {x: 525.9, y: 427.9}
+  m_AnchoredPosition: {x: 211.96, y: 90.1}
+  m_SizeDelta: {x: 525.9, y: 461.18}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1858879064
 MonoBehaviour:
