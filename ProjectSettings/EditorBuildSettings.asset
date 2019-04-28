@@ -11,7 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TitleScreen.unity
     guid: da1061fe7ca3b844ebe528fa15e4ba96
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Facility.unity
     guid: 34d26c6cb20b90748ac44fe228f4e84f
   - enabled: 1
@@ -38,4 +38,22 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CompostWorld.unity
     guid: 84d207d1ed9ac3244b9c81e21d13712e
+  - enabled: 1
+    path: Assets/Scenes/GameCompleted.unity
+    guid: a64884f4c90c54f90bc5d6d4cc343bd3
+  - enabled: 1
+    path: Assets/Scenes/Earth.unity
+    guid: 466833fff01ce40fea1495a9455811e5
+  - enabled: 1
+    path: Assets/Scenes/CompostIntro.unity
+    guid: a65741dbf46dd44aead22b84d42cd18f
+  - enabled: 1
+    path: Assets/Scenes/Earth Intro.unity
+    guid: b1130c2d38ded42a9819bc48c226129f
+  - enabled: 1
+    path: Assets/Scenes/GameOverCompost.unity
+    guid: 91ea3b33bb4904010b7400da362f40c1
+  - enabled: 1
+    path: Assets/Scenes/LevelCompleteCompost.unity
+    guid: 8d68350515b2f4e6aa5336aff32f4275
   m_configObjects: {}
