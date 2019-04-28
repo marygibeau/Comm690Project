@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PaperIntro.unity
     guid: f28e3513bfaa745cfbb247577739f98b
+  - enabled: 1
+    path: Assets/Scenes/CompostWorld.unity
+    guid: 84d207d1ed9ac3244b9c81e21d13712e
   m_configObjects: {}
