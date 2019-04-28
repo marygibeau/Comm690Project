@@ -4,12 +4,7 @@ using UnityEngine;
 
 public class PaperShredder : MonoBehaviour
 {
-    void OnCollisionEnter2D(Collision2D col)
-    {
-        // destroy paper when collides with left wall
-        if (col.gameObject.name == "LWall")
-        {
-            Destroy(gameObject);
-        }
+    private void OnTriggerExit2D(Collider2D other) {
+        Destroy(gameObject);    
     }
 }

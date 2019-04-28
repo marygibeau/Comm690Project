@@ -5,6 +5,9 @@ using UnityEngine;
 // destroys an enemy if they leave the screen or hit player
 public class enemySlicer : MonoBehaviour
 {
+    private void OnTriggerExit2D(Collider2D other) {
+        Destroy(gameObject);    
+    }
     void OnCollisionEnter2D(Collision2D col)
     {
         //  destroy if leave screen via left

@@ -93,7 +93,6 @@ GameObject:
   - component: {fileID: 8100391087484809499}
   - component: {fileID: 9049730702902833367}
   - component: {fileID: 4150874648165597795}
-  - component: {fileID: 7099722910613870135}
   m_Layer: 10
   m_Name: fly1
   m_TagString: enemy
@@ -232,18 +231,3 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!111 &7099722910613870135
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8100391087484809498}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 9f5f43f711311436a8f27924f82de232, type: 2}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0

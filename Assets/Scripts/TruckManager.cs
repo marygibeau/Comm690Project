@@ -29,24 +29,42 @@ public class TruckManager : MonoBehaviour
      {
          if(Input.GetKeyDown(KeyCode.RightArrow) && !(truckAnimator.GetCurrentAnimatorStateInfo(0).length > truckAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime) && canControl)
          {
-             if (currentWorld == 0) {
-                currentWorld = 1;
-                truckAnimator.Play("truckAnimation0to1");
-             } else if (currentWorld == 1) {
-                currentWorld = 2;
-                truckAnimator.Play("truckAnimation1to2");
-             }
+            switch (currentWorld) {
+               case 0:
+                  currentWorld = 1;
+                  truckAnimator.Play("truckAnimation0to1");
+                  break;
+               case 1:
+                  currentWorld = 2;
+                  truckAnimator.Play("truckAnimation1to2");
+                  break;
+               case 2:
+                  currentWorld = 3;
+                  truckAnimator.Play("truckAnimation2to3");
+                  break;
+               default:
+                  break;
+            }
              
          }
          if(Input.GetKeyDown(KeyCode.LeftArrow) && !(truckAnimator.GetCurrentAnimatorStateInfo(0).length > truckAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime) && canControl)
          {
-             if (currentWorld == 1) {
-                currentWorld = 0;
-                truckAnimator.Play("truckAnimation1to0");
-             } else if (currentWorld == 2) {
-                currentWorld = 1;
-                truckAnimator.Play("truckAnimation2to1");
-             }
+            switch (currentWorld) {
+               case 1:
+                  currentWorld = 0;
+                  truckAnimator.Play("truckAnimation1to0");
+                  break;
+               case 2:
+                  currentWorld = 1;
+                  truckAnimator.Play("truckAnimation2to1");
+                  break;
+               case 3:
+                  currentWorld = 2;
+                  truckAnimator.Play("truckAnimation3to2");
+                  break;
+               default:
+                  break;
+            }
          }
 
          if(Input.GetKeyDown(KeyCode.Return) && !(truckAnimator.GetCurrentAnimatorStateInfo(0).length > truckAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime)) {
@@ -57,6 +75,8 @@ public class TruckManager : MonoBehaviour
                     lvl.LoadLevel("PaperIntro");
                  } else if (currentWorld == 2) {
                     lvl.LoadLevel("CompostWorld");
+                 } else if (currentWorld == 3) {
+                    lvl.LoadLevel("Earth");
                  }
              }
              if (currentWorld == 0) {
@@ -78,6 +98,14 @@ public class TruckManager : MonoBehaviour
              } else if (currentWorld == 2) {
                 menuTitle.text = "Compost World";
                 menuSubtext.text = "This planet STINKS! Literally. Are you sure you want to proceed?";
+                menuContinueText.text = "Press enter to continue to the Compost Planet";
+                menuPanel.transform.position = transform.position;
+                menuPlanet.sprite = planets[2];
+                canControl = false;
+                menuPanel.SetActive(true);
+             } else if (currentWorld == 3) {
+                menuTitle.text = "Earth";
+                menuSubtext.text = "The humans that call this planet home have really torn thi Are you sure you want to proceed?";
                 menuContinueText.text = "Press enter to continue to the Compost Planet";
                 menuPanel.transform.position = transform.position;
                 menuPlanet.sprite = planets[2];
