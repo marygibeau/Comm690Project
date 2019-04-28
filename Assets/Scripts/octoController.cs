@@ -6,6 +6,7 @@ public class octoController : MonoBehaviour
 {
     public float offset = 0.1f;
     bool shooting = false;
+    public int bubbleSpeed;
     public GameObject bubblePrefab;
     // Start is called before the first frame update
     void Start()
@@ -25,14 +26,15 @@ public class octoController : MonoBehaviour
             // eventually move angle of shot to the left
             this.transform.Translate(Vector2.left * offset);
         }
-        if(Input.GetKey(KeyCode.Space)) {
+        if(Input.GetKeyDown(KeyCode.Space)) {
             shooting = true;
         }
     }
 
     void ShootBubble() {
         if (shooting) {
-            Instantiate(bubblePrefab, this.transform.position, Quaternion.identity);
+            var newBub = Instantiate(bubblePrefab, this.transform.position, Quaternion.Euler(0, 0, 0));
+            newBub.GetComponent<Rigidbody2D>().velocity = bubbleSpeed * transform.localScale.y * newBub.transform.up;
             shooting = false;
         }
     }
