@@ -100,7 +100,7 @@ public class snakeController : MonoBehaviour
             // lose condition
             if (eatenCount < 0) {
                 Debug.Log("eaten count is " + eatenCount);
-                lvler.LoadLevel("GameOver");
+                lvler.LoadLevel("CompostOver");
             }
             // destroy trash and spawn new in its place
             Destroy(other.gameObject);
@@ -109,7 +109,7 @@ public class snakeController : MonoBehaviour
 
         // lose condition if player collides with self
         if(this.tag == "Player" && other.tag == "tail") {
-            lvler.LoadLevel("GameOver");
+            lvler.LoadLevel("CompostOver");
         }
     }
 
