@@ -1825,7 +1825,7 @@ MonoBehaviour:
   lvler: {fileID: 1863204215}
   source: {fileID: 0}
   collect: {fileID: 8300000, guid: 99464925c5df14257ad2c57a900fb45c, type: 3}
-  ouch: {fileID: 0}
+  ouch: {fileID: 8300000, guid: cedceee91490c4227b6314dc3c0fb4a2, type: 3}
 --- !u!70 &1958149902
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

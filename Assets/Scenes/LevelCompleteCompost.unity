@@ -146,7 +146,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 17.6, y: 102.5}
+  m_AnchoredPosition: {x: 17.6, y: 171.3}
   m_SizeDelta: {x: 158.64001, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &36447191
@@ -5274,7 +5274,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Would you like to try\n and beat your score?"
+  m_Text: "You Taught this planet how to compost\n and solved their organic waste
+    problems! \nWould you like to try\n and beat your score?"
 --- !u!222 &700863517
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -25,8 +25,6 @@ public class bubbleScript : MonoBehaviour
             case 2:
                 this.gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 0.1f, 1);
                 break;
-            default:
-                break;
         }
 
     }
@@ -45,8 +43,11 @@ public class bubbleScript : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+    // make it so checks color of nearby collisions and respond accordingly
     private void OnCollision2D(Collision2D other)
     {
-        
+        // could be implemented by creating a counter of nearby similar colors on object
+        // on collision update current's by adding other's
+        // would be difficult to destroy all touching similar ones
     }
 }

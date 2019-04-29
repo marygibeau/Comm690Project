@@ -18,12 +18,19 @@ public class snakeController : MonoBehaviour
     bool hurt = false;
     public GameObject tailPrefab;
     public Text scoreBoard;
+    /*public AudiSource source;
+    public AudioClip collect;
+    public AudioClip ouch;*/
+
     void Start()
     {
         // sets initial direction to be right
         dir = Vector2.right * offset;
         // allows for rigid, non-continuous movement
-        InvokeRepeating("Move", 0.01f, 0.1f);    
+        InvokeRepeating("Move", 0.01f, 0.1f);  
+       /* source = GetComponent<AudioSource>();
+        source.playOnAwake = false;
+        source.clip = collect;*/  
     }
 
     void Update()
@@ -90,6 +97,8 @@ public class snakeController : MonoBehaviour
             // destroy old food and spawn new in its place
             Destroy(other.gameObject);
             foodie.FoodSpawn();
+            /*source.clip = collect;
+            source.Play();*/
         }
 
         // remove from score and change game state when eat trash
@@ -100,16 +109,18 @@ public class snakeController : MonoBehaviour
             // lose condition
             if (eatenCount < 0) {
                 Debug.Log("eaten count is " + eatenCount);
-                lvler.LoadLevel("GameOver");
+                lvler.LoadLevel("CompostOver");
             }
             // destroy trash and spawn new in its place
             Destroy(other.gameObject);
             foodie.TrashSpawn();
+            /*source.clip = ouch;
+            source.Play();*/
         }
 
         // lose condition if player collides with self
         if(this.tag == "Player" && other.tag == "tail") {
-            lvler.LoadLevel("GameOver");
+            lvler.LoadLevel("CompostOver");
         }
     }
 
