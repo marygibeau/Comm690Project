@@ -246,7 +246,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 12800000, guid: 5d41a65648e8b43c3beb7860f635b601, type: 3}
     m_FontSize: 19
-    m_FontStyle: 0
+    m_FontStyle: 3
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 195
@@ -256,14 +256,14 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Hello explorer! This planet has not learned how to recycle their waste
-    so they are being overrun with paper! \n\nThe average person uses seven trees
-    a year in paper, wood, and other products made from trees. This amounts to about
-    2,000,000,000 trees per year! \n\nEach ton of recycled paper can save 17 trees,
-    380 gallons of oil and 7000 gallons of water. Recycling paper saves energy, landfill
-    space, and water! \n\nRemember to recycle any and all paper products and be sure
-    to buy products made out of recycled materials. Manufacturing recycled paper uses
-    only 60% of the energy needed to make paper from new materials.\n"
+  m_Text: "Hello explorer! This planet has not learned how to properly recycle their
+    waste so they are being overrun with paper! \n\nThe average person uses seven
+    trees a year in paper, wood, and other products made from trees. This amounts
+    to about 2,000,000,000 trees per year! \n\nEach ton of recycled paper can save
+    17 trees, 380 gallons of oil and 7000 gallons of water. Recycling paper saves
+    energy, landfill space, and water! \n\nRemember to recycle any and all paper products
+    and be sure to buy products made out of recycled materials. Manufacturing recycled
+    paper uses only 60% of the energy needed to make paper from new materials.\n"
 --- !u!222 &296557518
 CanvasRenderer:
   m_ObjectHideFlags: 0
