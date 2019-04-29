@@ -253,8 +253,10 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "Almost one third of the compost stream by weight is organic waste like
     food, leaves, and grass \n\nA 1000-square-foot area of lawn can generate up to
-    500 pounds of grass clippings in a single growing season\n\nUse of compost can
-    reduce the need and use of synthetic fertilizers and pesticides"
+    500 pounds of grass clippings in a single growing season\n\nTIPS: Ban the trashcan!
+    Try and use paper bags for example\nCollect all your food scraps in a brown paper
+    bag and store it in the freezer to keep bugs and mold away. Dont throw this in
+    to the regular trashcan. "
 --- !u!222 &745193657
 CanvasRenderer:
   m_ObjectHideFlags: 0
