@@ -11,9 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TitleScreen.unity
     guid: da1061fe7ca3b844ebe528fa15e4ba96
-  - enabled: 1
-    path: Assets/Scenes/Facility.unity
-    guid: 34d26c6cb20b90748ac44fe228f4e84f
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/map.unity
     guid: d10423181a530ba4c8938866f23e1486
@@ -41,4 +41,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CompostOver.unity
     guid: 330c7ee37018d4c2f9fe82c52fdd7f0c
+  - enabled: 1
+    path: Assets/Scenes/Earth.unity
+    guid: 466833fff01ce40fea1495a9455811e5
   m_configObjects: {}
