@@ -603,7 +603,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 12800000, guid: 5d41a65648e8b43c3beb7860f635b601, type: 3}
     m_FontSize: 30
-    m_FontStyle: 0
+    m_FontStyle: 3
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 180
@@ -615,8 +615,8 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: Congratulations! You have rescued all the planets in danger in this galaxy!
     Always remember that it is easier to prevent a planet from becoming overrun with
-    waste than it is to clean it up. Always remember to take care of your planet.
-    You have the skills now, so go be a hero!
+    waste than it is to clean it up. Be sure to take care of your planet. You have
+    the skills now, so go be a hero!
 --- !u!222 &1152615539
 CanvasRenderer:
   m_ObjectHideFlags: 0
